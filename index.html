@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data Form - Cocoon Group Tuition</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="form-container">
+        <header>
+            <img src="cocoon logo.webp" alt="Cocoon Logo" class="logo">
+            <h1 class="brand-name">COCOON GROUP TUITION</h1>
+            <h2 class="form-title">STUDENT DATA FORM</h2>
+            <p class="form-subtitle">Please provide the student's information for our records.</p>
+        </header>
+
+        <form id="enrollmentForm">
+            <!-- Section 1: Basic Information -->
+            <section>
+                <h3 class="section-title">Student Profile</h3>
+
+                <div class="grid-row">
+                    <div class="input-group">
+                        <label for="first_name">First Name <span class="required">*</span></label>
+                        <input type="text" id="first_name" name="first_name" placeholder="Shruti" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="last_name">Last Name <span class="required">*</span></label>
+                        <input type="text" id="last_name" name="last_name" placeholder="Patel" required>
+                    </div>
+                </div>
+
+                <div class="grid-row">
+                    <div class="input-group">
+                        <label>Gender <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <label class="radio-button">
+                                <input type="radio" name="gender" value="Male" required>
+                                <span>Male</span>
+                            </label>
+                            <label class="radio-button">
+                                <input type="radio" name="gender" value="Female">
+                                <span>Female</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="dob">Date of Birth (DOB) <span class="required">*</span></label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="hobbies">Hobbies</label>
+                    <select id="hobbies" name="hobbies" onchange="window.toggleOtherLanguage(this, 'hobbies_other')">
+                        <option value="" disabled selected>Select Hobby</option>
+                        <option value="Dancing">Dancing</option>
+                        <option value="Singing">Singing</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Chess">Chess</option>
+                        <option value="Football">Football</option>
+                        <option value="Cricket">Cricket</option>
+                        <option value="Other">Others</option>
+                    </select>
+                    <input type="text" id="hobbies_other" name="hobbies_other" class="hidden-input" placeholder="Specify hobby">
+                </div>
+
+                <div class="grid-row">
+                    <div class="input-group">
+                        <label>Grade <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <label class="radio-button">
+                                <input type="radio" name="grade" value="9" required>
+                                <span>9th</span>
+                            </label>
+                            <label class="radio-button">
+                                <input type="radio" name="grade" value="10">
+                                <span>10th</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label>Branch <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <label class="radio-button">
+                                <input type="radio" name="branch" value="A" required>
+                                <span>A</span>
+                            </label>
+                            <label class="radio-button">
+                                <input type="radio" name="branch" value="N">
+                                <span>N</span>
+                            </label>
+                            <label class="radio-button">
+                                <input type="radio" name="branch" value="T">
+                                <span>T</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="school_name">School Name <span class="required">*</span></label>
+                    <select id="school_name" name="school_name" required>
+                        <option value="" disabled selected>Select School</option>
+                        <option value="D.A.V. PUBLIC SCHOOL">D.A.V. PUBLIC SCHOOL</option>
+                        <option value="NEW HORIZON PUBLIC SCHOOL">NEW HORIZON PUBLIC SCHOOL</option>
+                        <option value="DATTA MEGHE WORLD ACADEMY">DATTA MEGHE WORLD ACADEMY</option>
+                        <option value="NEW HORIZON SCHOLARS SCHOOL">NEW HORIZON SCHOLARS SCHOOL</option>
+                        <option value="ZENITH INTERNATIONAL & PETITE KIDS SCHOOL">ZENITH INTERNATIONAL & PETITE KIDS SCHOOL</option>
+                        <option value="PHOENIX INTERNATIONAL SCHOOL">PHOENIX INTERNATIONAL SCHOOL</option>
+                        <option value="VIBGYOR HIGH SCHOOL">VIBGYOR HIGH SCHOOL</option>
+                        <option value="RELIANCE FOUNDATION SCHOOLS">RELIANCE FOUNDATION SCHOOLS</option>
+                        <option value="NEW BOMBAY CITY SCHOOL">NEW BOMBAY CITY SCHOOL</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="prior_school_name">Prior Year School Name <span class="required">*</span></label>
+                    <select id="prior_school_name" name="prior_school_name" required>
+                        <option value="" disabled selected>Select School</option>
+                        <option value="D.A.V. PUBLIC SCHOOL">D.A.V. PUBLIC SCHOOL</option>
+                        <option value="NEW HORIZON PUBLIC SCHOOL">NEW HORIZON PUBLIC SCHOOL</option>
+                        <option value="DATTA MEGHE WORLD ACADEMY">DATTA MEGHE WORLD ACADEMY</option>
+                        <option value="NEW HORIZON SCHOLARS SCHOOL">NEW HORIZON SCHOLARS SCHOOL</option>
+                        <option value="ZENITH INTERNATIONAL & PETITE KIDS SCHOOL">ZENITH INTERNATIONAL & PETITE KIDS SCHOOL</option>
+                        <option value="PHOENIX INTERNATIONAL SCHOOL">PHOENIX INTERNATIONAL SCHOOL</option>
+                        <option value="VIBGYOR HIGH SCHOOL">VIBGYOR HIGH SCHOOL</option>
+                        <option value="RELIANCE FOUNDATION SCHOOLS">RELIANCE FOUNDATION SCHOOLS</option>
+                        <option value="NEW BOMBAY CITY SCHOOL">NEW BOMBAY CITY SCHOOL</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Subjects Opted <span class="required">*</span></label>
+                    <div class="checkbox-grid">
+                        <label class="checkbox-item"><input type="checkbox" name="subjects" value="Maths" checked> Maths</label>
+                        <label class="checkbox-item"><input type="checkbox" name="subjects" value="Science" checked> Science</label>
+                        <label class="checkbox-item"><input type="checkbox" name="subjects" value="Social Science" checked> Social Science</label>
+                        <label class="checkbox-item"><input type="checkbox" name="subjects" value="English" checked> English</label>
+                        <label class="checkbox-item"><input type="checkbox" name="subjects" value="Hindi"> Hindi</label>
+                        <label class="checkbox-item"><input type="checkbox" name="subjects" value="Marathi"> Marathi</label>
+                        <label class="checkbox-item"><input type="checkbox" name="subjects" value="Sanskrit"> Sanskrit</label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2: Primary Contact -->
+            <section>
+                <h3 class="section-title">Primary Contact</h3>
+                <div class="grid-row">
+                    <div class="input-group">
+                        <label for="primary_name">Contact Name <span class="required">*</span></label>
+                        <input type="text" id="primary_name" name="primary_name" placeholder="Full Name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="primary_number">Phone Number <span class="required">*</span></label>
+                        <input type="tel" id="primary_number" name="primary_number" placeholder="10-digit number" required>
+                    </div>
+                </div>
+                <div class="grid-row">
+                    <div class="input-group">
+                        <label>Relation <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <label class="radio-button">
+                                <input type="radio" name="primary_relation" value="Father" required>
+                                <span>Father</span>
+                            </label>
+                            <label class="radio-button">
+                                <input type="radio" name="primary_relation" value="Mother">
+                                <span>Mother</span>
+                            </label>
+                            <label class="radio-button">
+                                <input type="radio" name="primary_relation" value="Guardian">
+                                <span>Guardian</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="primary_language">Primary Language <span class="required">*</span></label>
+                        <select id="primary_language" name="primary_language" required onchange="toggleOtherLanguage(this, 'primary_language_other')">
+                            <option value="Hindi">Hindi</option>
+                            <option value="Marathi">Marathi</option>
+                            <option value="English">English</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <input type="text" id="primary_language_other" name="primary_language_other" class="hidden-input" placeholder="Specify language">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3: Secondary Contact -->
+            <section>
+                <h3 class="section-title">Secondary Contact</h3>
+                <div class="grid-row">
+                    <div class="input-group">
+                        <label for="secondary_name">Contact Name <span class="required">*</span></label>
+                        <input type="text" id="secondary_name" name="secondary_name" placeholder="Full Name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="secondary_number">Phone Number <span class="required">*</span></label>
+                        <input type="tel" id="secondary_number" name="secondary_number" placeholder="10-digit number" required>
+                    </div>
+                </div>
+                <div class="grid-row">
+                    <div class="input-group">
+                        <label>Relation <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <label class="radio-button">
+                                <input type="radio" name="secondary_relation" value="Father" required>
+                                <span>Father</span>
+                            </label>
+                            <label class="radio-button">
+                                <input type="radio" name="secondary_relation" value="Mother">
+                                <span>Mother</span>
+                            </label>
+                            <label class="radio-button">
+                                <input type="radio" name="secondary_relation" value="Guardian">
+                                <span>Guardian</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="secondary_language">Secondary Language <span class="required">*</span></label>
+                        <select id="secondary_language" name="secondary_language" required onchange="toggleOtherLanguage(this, 'secondary_language_other')">
+                            <option value="Hindi">Hindi</option>
+                            <option value="Marathi">Marathi</option>
+                            <option value="English">English</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <input type="text" id="secondary_language_other" name="secondary_language_other" class="hidden-input" placeholder="Specify language">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 4: Enrollment Details -->
+            <section>
+                <h3 class="section-title">Enrollment Details</h3>
+                <div class="grid-row">
+                    <div class="input-group">
+                        <label for="enrollment_status">Status <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <label class="radio-button">
+                                <input type="radio" name="enrollment_status" value="Active" checked required>
+                                <span>Active</span>
+                            </label>
+                            <label class="radio-button">
+                                <input type="radio" name="enrollment_status" value="Paused">
+                                <span>Paused</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="enrollment_date">Enrollment Date <span class="required">*</span></label>
+                        <input type="date" id="enrollment_date" name="enrollment_date" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Combo Package <span class="required">*</span></label>
+                    <div class="radio-group">
+                        <label class="radio-button">
+                            <input type="radio" name="combo_package" value="YES" required>
+                            <span>YES</span>
+                        </label>
+                        <label class="radio-button">
+                            <input type="radio" name="combo_package" value="NO" checked>
+                            <span>NO</span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <div id="successOverlay" class="success-overlay">
+                <div class="success-card">
+                    <div class="success-icon">✓</div>
+                    <h2>FORM SUBMITTED</h2>
+                    <p>Student enrollment data has been captured successfully.</p>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="submit-btn" id="submitBtn">Submit Student Data</button>
+            </div>
+        </form>
+    </div>
+    <script src="script.js?v=2.7"></script>
+</body>
+</html>
