@@ -70,6 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const branch = getRadio('branch');
             const school_name = getVal('school_name');
             const prior_school_name = getVal('prior_school_name');
+            const address = getVal('address');
 
             // Format DOB to dd-mm-yyyy
             let dob = '';
@@ -152,6 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 branch,
                 school_name,
                 prior_school_name,
+                address,
                 subjects_opted: selectedSubjects.join(', '),
                 primary_contact_name: primary_name,
                 primary_contact_phone: primary_number,
