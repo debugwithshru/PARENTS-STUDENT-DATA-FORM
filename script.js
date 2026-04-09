@@ -248,7 +248,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 body: JSON.stringify(payload)
             });
 
-            if (response.ok || response.status === 0) { // status 0 for no-cors situations if needed, but here we expect POST to work
+            if (response.ok || response.status === 0) {
                 console.log('Successfully submitted');
                 
                 // Show 'FORM SUBMITTED' Overlay
